@@ -1,0 +1,14 @@
+package request
+
+import "net/http"
+
+func getHeader() http.Header {
+	header := &http.Header{}
+	header.Set("content-Type", "application/x-www-form-urlencoded")
+	header.Set("Cookie", "WM_TID=36fj4OhQ7NdU9DhsEbdKFbVmy9tNk1KM; _iuqxldmzr_=32; _ntes_nnid=26fc3120577a92f179a3743269d8d0d9,1536048184013; _ntes_nuid=26fc3120577a92f179a3743269d8d0d9; __utmc=94650624; __utmz=94650624.1536199016.26.8.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); WM_NI=2Uy%2FbtqzhAuF6WR544z5u96yPa%2BfNHlrtTBCGhkg7oAHeZje7SJiXAoA5YNCbyP6gcJ5NYTs5IAJHQBjiFt561sfsS5Xg%2BvZx1OW9mPzJ49pU7Voono9gXq9H0RpP5HTclE%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6eed5cb8085b2ab83ee7b87ac8c87cb60f78da2dac5439b9ca4b1d621f3e900b4b82af0fea7c3b92af28bb7d0e180b3a6a8a2f84ef6899ed6b740baebbbdab57394bfe587cd44b0aebcb5c14985b8a588b6658398abbbe96ff58d868adb4bad9ffbbacd49a2a7a0d7e6698aeb82bad779f7978fabcb5b82b6a7a7f73ff6efbd87f259f788a9ccf552bcef81b8bc6794a686d5bc7c97e99a90ee66ade7a9b9f4338cf09e91d33f8c8cad8dc837e2a3; JSESSIONID-WYYY=G%5CSvabx1X1F0JTg8HK5Z%2BIATVQdgwh77oo%2BDOXuG2CpwvoKPnNTKOGH91AkCHVdm0t6XKQEEnAFP%2BQ35cF49Y%2BAviwQKVN04%2B6ZbeKc2tNOeeC5vfTZ4Cme%2BwZVk7zGkwHJbfjgp1J9Y30o1fMKHOE5rxyhwQw%2B%5CDH6Md%5CpJZAAh2xkZ%3A1536204296617; __utma=94650624.1052021654.1536048185.1536199016.1536203113.27; __utmb=94650624.12.10.1536203113")
+	//_iuqxldmzr_=32; _ntes_nnid=166570894a5aa554a1d18e0ad885df56,1558269821897; _ntes_nuid=166570894a5aa554a1d18e0ad885df56; WM_TID=3fJJKTvvRqBAAUQBQRN9zLIEA6jGYsED; usertrack=ezq0J10fIphfXW+ZAwhyAg==; WM_NI=6LG14eUQJxO9DVR6BzLAKrzNT%2FW6zHn7wza2%2FH2igHrKj%2BWVcPReykrD%2Foz3rbotEwr09DKvL5%2B%2BpSKrNceli1X%2BNh4cGpOLEFJJ15DvqRGhwcGuC5wW7ni5TPu3UPNINGc%3D; WM_NIKE=9ca17ae2e6ffcda170e2e6ee8fb779edbaaadaf85082b08eb3d15e939f9eaab88086bea6a3eb25f4bb8b96ed2af0fea7c3b92af69489d2b76f978f8699ce33888a9ed7c172909f8593f94698f199d7f944aee9b99be43aed98fe8ae644b295a6ccd65ea1909e86fc61b29ce190f939b2bea195c87db2f0f7a5ca7e90ebe5ccf35989ae8284e868abef98cccd64f8bd8991ce48879a86abb43f88aabfb3c664b5bd8996c23fb589f98fec3f9890bbd4d85c8e9782a8e237e2a3; JSESSIONID-WYYY=GKVFXb8zFu%5C0IdzAHOewHgAJtxygtISASVKKcHpnxsojMVUiI81jERV%5CetKg%2FWww5hbqWgizZUpIZyhE%2B5%5CtbkuX4iAXM6K2%2B%2BBsC5AQef2kZFsSxABKKKzdCfrMnIi9Raiyc5Nsr1SYNc2SfrRFfHScA%2FFxpuis6IIVPT2pQ5NQHEY5%3A1563899429971
+	header.Set("Host", "music.163.com")
+	header.Set("Referer", "http://music.163.com/")
+	header.Set("User-Agent", getRandomUserAgent())
+	return *header
+}
